@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require foundation
 //= require turbolinks
 //= require_tree .
 
@@ -26,4 +25,3 @@ var hide_spinner = function(){
 var show_spinner = function(){
   $('#spinner').show();
 }
-
