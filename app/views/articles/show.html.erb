@@ -1,0 +1,10 @@
+
+	<%= @article.title %>
+	<%= @article.description %>
+	<%= @article.excerpt %>
+	<% if @article.categories.any? %>
+	<p>Categories: <%= render @article.categories %> </p>
+	<p>Created By <%= @article.user.username %></p>
+	<p class="time">Created At <%= @article.created_at.strftime("%b %e, %l:%M %p") %> ago, Updated At <%= @article.updated_at.strftime("%b %e, %l:%M %p") %> ago</p>
+	<% end %>
+

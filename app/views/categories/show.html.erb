@@ -1,0 +1,9 @@
+<h1><%= "Category:" + @category.name %></h1>
+<%= render 'articles/articles', obj: @category_articles %>
+<div class="text-center">
+<% if logged_in? %>
+	<%= link_to "Edit Category Name" , edit_category_path(@category) %>
+	</div>
+	<% end %>
+</div>
+

@@ -1,0 +1,6 @@
+<%= title "Blog Users" %>
+<% @users.each do |user| %>
+	<%= user.username %>
+	<%= user.email %>
+	<li><small><%= pluralize(user.articles.count, "article") if user.articles %></small></li>
+<% end %>

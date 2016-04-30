@@ -1,0 +1,8 @@
+ <div class="row messages">
+ 	 <% flash.each do |name, e|  %>
+ 	 <div data-alert class="alert-box <%= name.to_s == 'notice' ? 'success' : 'alert' %>">
+      <%= content_tag :div, e %>
+      <a href="#" class="close">&times;</a>
+	</div>
+	 <% end %>
+ </div>

@@ -1,0 +1,17 @@
+<%= form_for(@category, :html => {role: "form"}) do |f| %>
+	<div class="form-group">
+			<%= f.label :name %> 
+		</div>
+		<div class="col-xs-8">
+			<%= f.text_field :name, placeholder: "Enter Category Name", autofocus: true %>
+		</div>
+	</div>
+	<div class="form-group text-center ">
+		<div class="col-xs-12">
+			<%= f.submit "Create Category", class: "button primary small" %>
+		</div>
+	</div>
+<% end %>
+	<div class="col-xs-12">
+		<%= link_to "Back to Articles", articles_path %>
+	</div>

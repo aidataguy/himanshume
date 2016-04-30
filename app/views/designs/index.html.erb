@@ -1,0 +1,5 @@
+<% @designs.each do |design| %>
+	<%= link_to design.name, design_path(design) %>
+	<%= link_to design.url %>
+	<%= design.design_description %>
+<% end %>

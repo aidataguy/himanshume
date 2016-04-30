@@ -1,0 +1,36 @@
+<%= title "Blog Posts" %>
+<div class="row article-section">
+	<div class="large-12 columns">
+      <div class="row collapse">
+        <div class="small-10 columns">
+        <%= form_tag(articles_path, :method => "get", id: "search-form") do %>
+          <%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
+        </div>
+        <div class="small-2 columns">
+          <%= button_tag(type: :submit, class: "button alert radius postfix") do %>
+        <i class="fi-magnifying-glass"></i>
+        </div>
+        <% end %>
+		<% end %>
+      </div>
+    </div>
+  </div>
+<div class="large-12 columns">
+	<% if @articles.present? %>
+	<% else %>
+		<h5>Nothing Found. <%=link_to "Go Back", articles_path %></h5>
+	<% end %>	
+</div>	
+<div class= "large-12 columns">
+
+
+	<% @articles.each do |article| %>
+		<h2 class="article-title">
+		<%= link_to article.title, article_path(article) %>
+		</h2>
+		<p><%= article.description %></p>
+		<p><%= article.excerpt %></p>
+		<p>Author <%= article.user.username %></p>
+		<p class="time">Created At <%= article.created_at.strftime("%b %e, %l:%M %p") %>, Last updated on <%= article.updated_at.strftime("%b %e, %l:%M %p") %></p>
+	<% end %>
+</div>
