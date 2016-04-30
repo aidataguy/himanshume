@@ -54,7 +54,7 @@ clear: both ;
     @extend %clearfix;
 }
 
-
+// all the columns are defined here. They shall work as per the requirement
 @media #{$breakpoint-medium} {
 
     .wrapper {
