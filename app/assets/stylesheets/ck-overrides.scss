@@ -1,0 +1,124 @@
+// Here is where we define colors
+$main-color: #cd3b14;
+$html-color: #fafafa;
+$container-bg-color: #b6b5b6;
+$nav-color: #818181;
+$text-colors: #000000;
+$visited-links: $main-color;
+$hover: #28d2d2;
+// grid variables
+$grid-columns: 12;
+$grid-max-width: 65em;
+// breakpoints
+$breakpoint-small: "only screen and (min-width: 20em)";
+$breakpoint-medium: "only screen and (min-width: 30em)";
+// resets
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    }
+
+//defining wrapper
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+
+}
+// the spooky row
+.row:before,
+.wrapper:after,
+.row:after {
+content:"";
+display: table; ;
+clear: both ;
+}
+.row{
+  width: 100%;
+}
+// overall col derivative definition some adjustments hehe ;)
+[class*='ck-col-'] {
+  float: left;
+  padding: 1em;
+  width: 100%;
+  min-height: 1px;
+}
+// column derivatives
+
+.wrapper,
+.row {
+    @extend %clearfix;
+}
+
+
+@media #{$breakpoint-medium} {
+
+    .wrapper {
+        width: 95%;
+        max-width: $grid-max-width;
+        }
+
+    .ck-col-one {
+        width: 8.33333%;
+        }
+
+    .ck-col-two {
+        width: 16.66667%;
+        }
+
+    .ck-col-three {
+        width: 25%;
+        }
+
+    .ck-col-four {
+        width: 33.33333%;
+        }
+
+    .ck-col-five {
+        width: 41.66667%;
+        }
+
+    .ck-col-six {
+        width: 50%;
+        }
+
+    .ck-col-seven {
+        width: 58.33333%;
+        }
+
+    .ck-col-eight {
+        width: 66.66667%;
+        }
+
+    .ck-col-nine {
+        width: 75%;
+        }
+
+    .ck-col-ten {
+        width: 83.33333%;
+        }
+
+    .ck-col-eleven {
+        width: 91.66667%;
+        }
+
+    .ck-col-twelve {
+        width: 100%;
+        }
+
+}
+@for $i from 1 through 12 {
+
+    .ck-col-#{$i} {
+        width: 100% / $grid-columns * $i;
+        }
+
+}
+
+// our media queries goes here I just imported them
+@import "mixin";
+// @import "media";
