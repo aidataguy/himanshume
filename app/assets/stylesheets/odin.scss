@@ -1,0 +1,159 @@
+/*
+CSS Manifest
+Name: Odin CSS FrameWork
+Version: 0.1
+Copyright: CodeKrieg
+Author: Himanshu Patel
+Contributors: None
+Questions, comments, concerns, love letters:
+himanshu.p@codekrieg.com
+Author URL: http://himanshupatel.net
+Company URL: http://codekrieg.com
+Twitter: https://twitter.com/codekrieg
+Made In Italy & India
+*/
+
+@import "ck-overrides";
+@import "nav";
+@import "animations";
+// @import "footer";
+body {
+ background-color: $html-color;
+ color: $text-colors;
+ font-family: $font-main;
+}
+p{
+  font-family: $font-main;
+  font-weight: 500;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: $font-main;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+a{
+  font-weight: 200;
+  text-decoration: none;
+  &:hover{
+    color: $hover;
+  }
+  &:visited{
+    color:$visited-links;
+  }
+}
+
+.highliter{
+  color: $highliter;
+}
+img
+ {
+    width: auto;
+    max-width: 100%;
+    height: auto !important;
+}
+
+// Nav Bar
+nav{
+ background-color: $nav-color;
+ height: $nav-height;
+
+}
+
+.fixed-to-top{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+.bar{
+  display: flex;
+  text-align: justify;
+  .bar-section{
+    width: 100%;
+    margin: 0 auto;
+    a{
+      font-weight: 200;
+      text-decoration: none;
+      color: $brand-color;
+      &:hover{
+        color: $hover;
+      }
+    }
+    .right-nav{
+      width: auto;
+      float: right;
+      padding: $nav-elem-padding;
+      li{
+        padding:0 1.2em;
+        display: inline-block;
+        list-style: none;
+        a{
+          font-size: 1em;
+          font-weight: 700;
+        }
+      }
+    }
+    .left-nav{
+      width: auto;
+      float: left;
+      padding: $nav-elem-padding;
+      li{
+        padding: 0 1.2em;
+        display: inline-block;
+        list-style: none;
+        a{
+          font-size: 1em;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+// This section handles the awesomness of the brand name
+.brand-section{
+  width: 16.33% !important;
+
+  border: 0.75em $brand-color bold;
+    ul.title-area{
+      width: auto;
+      text-align: center;
+      height: $brand-height !important;
+      margin-top: .75em;
+      border: 0.15em $brand-color solid;
+      .toggle-mobile{
+        list-style: none;
+        float:right;
+      }
+      &:hover{
+        background-color: $brand-hover-color;
+      }
+    }
+    li.brand{
+      list-style: none ;
+      display: inline-block;
+      margin-top: 1.5em;
+      a{
+        color: $brand-color;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1.5em;
+        &:hover{
+          color: $brand-color;
+          transition: zoom;
+        }
+      }
+    }
+  }
+
+// Our Hero Unit Details Are Over Here
+.hero-text{
+    display: table-cell;
+    vertical-align:middle;
+    text-align:center;
+    background-color: transparentize(#ffffff, 0.55);
+    h1{
+      font-weight: 700;
+    }
+}

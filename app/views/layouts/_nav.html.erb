@@ -1,45 +1,24 @@
-<div class="sticky">  
-  <nav class="top-bar" data-topbar role="navigation">
+<nav class="bar fixed-to-top" role="navigation">
+  <div class="wrapper">
+      <section class="bar-section">
+        <ul class="left-nav">
+          <li class= "<%= active_class(root_path) %>"><%= link_to "Home", root_path %></li>
+          <li class= "<%= active_class(about_path) %>"><%= link_to "About", about_path %></li>
+          <li class= "<%= active_class(articles_path) %>"><%= link_to "Blog", articles_path %></li>
+        </ul>
+        <!-- Right Nav Section -->
 
-    <section class="top-bar-section">
-      <ul class="left">
-        <li class= "<%= active_class(root_path) %>"><%= link_to "Home", root_path %></li>
-        <li class= "<%= active_class(about_path) %>"><%= link_to "About", about_path %></li>
-        <li class= "<%= active_class(articles_path) %>"><%= link_to "Blog", articles_path %></li>
-      </ul>
-    </section>
-    
-
-    <ul class="title-area">
-
-      <li class="name">
-
-        <%= link_to "#{image_tag('logosmall.png')}".html_safe, root_path%>
-      </li>
-
-       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-
-      <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
-
-    </ul>
-
-
-
-    <section class="top-bar-section">
-
-      <!-- Right Nav Section -->
-
-      <ul class="right">
-        <li class= "<%= active_class(designs_path) %>"><%= link_to "Designs", designs_path %></li>
-        <li class= "<%= active_class(development_path) %>"><%= link_to "Development", development_path %></li>
-        <li class= "<%= active_class(root_path) %>"><%= link_to "Achievements", root_path %></li>
-      </ul>
-
-      <!-- Left Nav Section -->
-
-      
-
-    </section>
-
+        <ul class="right-nav">
+          <li class= "<%= active_class(designs_path) %>"><%= link_to "Designs", designs_path %></li>
+          <li class= "<%= active_class(development_path) %>"><%= link_to "Development", development_path %></li>
+          <li class= "<%= active_class(root_path) %>"><%= link_to "Achievements", root_path %></li>
+        </ul>
+        <div class=" bar-section brand-section pulse">
+          <ul class="title-area">
+            <li class="brand" align="center">
+              <%= link_to "Himanshu Patel", root_path%>
+            </li>
+          </ul>
+        </div>
+      </section>
   </nav>
-</div>  

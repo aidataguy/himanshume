@@ -1,3 +1,17 @@
+/*
+CSS Manifest
+Name: Odin CSS FrameWork - override
+Version: 0.1
+Copyright: CodeKrieg
+Author: Himanshu Patel
+Contributors: None
+Author URL: http://himanshupatel.net
+Company URL: http://codekrieg.com
+Twitter: https://twitter.com/codekrieg
+Made In Italy & India
+*/
+// font imports
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,700italic,400italic);
 // Here is where we define colors
 $main-color: #cd3b14;
 $html-color: #fafafa;
@@ -6,9 +20,17 @@ $nav-color: #818181;
 $text-colors: #000000;
 $visited-links: $main-color;
 $hover: #28d2d2;
+$highliter: #d26969;
+$font-main: 'Josefin Sans', sans-serif;
+$nav-height: 6em;
+$nav-elem-padding: 2em 0;
+$brand-height: 4em;
+$brand-color: #ffffff;
+$brand-hover-color: #f27f94;
+
 // grid variables
 $grid-columns: 12;
-$grid-max-width: 65em;
+$grid-max-width: auto;
 // breakpoints
 $breakpoint-small: "only screen and (min-width: 20em)";
 $breakpoint-medium: "only screen and (min-width: 30em)";
@@ -23,11 +45,13 @@ $breakpoint-medium: "only screen and (min-width: 30em)";
     box-sizing: border-box;
     }
 
+.top-reset{
+  padding-top: 10em;
+}
 //defining wrapper
 .wrapper {
     width: 100%;
     margin: 0 auto;
-
 }
 // the spooky row
 .row:before,
@@ -52,6 +76,10 @@ clear: both ;
 .wrapper,
 .row {
     @extend %clearfix;
+}
+
+.hero-unit {
+  @extend %hero;
 }
 
 // all the columns are defined here. They shall work as per the requirement
@@ -118,6 +146,17 @@ clear: both ;
         }
 
 }
+.small-hr{
+  width: 15%;
+  // margin-left: 37.33%;
+  }
+
+.med-hr{
+  width: 18.33%;
+  margin-left: 40.33%;
+  color: #868686;
+  }
+
 
 // our media queries goes here I just imported them
 @import "mixin";

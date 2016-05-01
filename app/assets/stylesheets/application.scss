@@ -14,29 +14,4 @@
  *= require_self
  */
 
- @import "ck-overrides";
- @import "nav";
- // @import "footer";
- body {
-  background-color: $html-color;
-  color: $text-colors;
- }
- img
-  {
-     width: auto;
-     max-width: 100%;
-     height: auto !important;
- }
-
-nav{
-  background-color: $nav-color;
-}
-
-.label {
-	margin: 0 0.2em;
-	a{
-		font-weight: 700;
-		font-size: 1em;
-		color: #fff;
-	}
-}
+ @import "odin";
