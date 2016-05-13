@@ -14,3 +14,22 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+$(document).ready(function(){
+	var trigger = $(".trigger a");
+	var menu = $(".menu-icon");
+	trigger.on('click', function(){
+		var html = $(".nav-responsive").html();
+		menu.html(html).toggle(0, function(){
+			if($(this).is(":visible")){
+				trigger.html('<i class="fa fa-bars"></i>');
+			}else{
+				trigger.html('<i class="fa fa-bars"></i>');
+			}
+			$('.menu-icon li.trigger').remove();
+		});
+	});
+	$(window).resize(function(){
+		menu.hide();
+		trigger.html('<i class="fa fa-bars"></i>');
+	});
+})

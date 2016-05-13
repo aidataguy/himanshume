@@ -9,14 +9,16 @@
     <%= stylesheet_link_tag    "application" %>
     <%= stylesheet_link_tag    "https://fonts.googleapis.com/css?family=Dancing+Script:400,700" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag "https://use.fontawesome.com/0e96f0f28a.js" %>
     <%= csrf_meta_tags %>
   </head>
 
   <body>
   <%= render 'layouts/messages' %>
   <%= render 'layouts/nav' %>
-
+  <div class="wrapper">
     <%= yield %>
+  </div>
 
   <%= render 'layouts/footer' %>
   </body>

@@ -55,96 +55,59 @@ img
 }
 
 // Nav Bar
-nav{
- background-color: $nav-color;
- height: $nav-height;
-
-}
-
-.fixed-to-top{
+header{
+  position: fixed;
+  width: 100%;
+  height: $nav-height;
   position: fixed;
   top: 0;
-  right: 0;
+  bottom: 0;
   left: 0;
-}
-.bar{
-  display: flex;
-  text-align: justify;
-  .bar-section{
-    width: 100%;
-    margin: 0 auto;
-    a{
-      font-weight: 200;
-      text-decoration: none;
-      color: $brand-color;
-      &:hover{
+  z-index: 100;
+  background-color: $nav-color;
+  .nav-main{
+  background-color: $nav-color;
+   float: right;
+   padding: 20px;
+   clear: both;
+       // Mobile menu nav
+    .hidden{
+      display: none;
+    }
+    ul{
+      list-style: none;
+      li{
+        display: inline-block;
+        float: left;
+        padding: 10px;
         color: $hover;
-      }
-    }
-    .right-nav{
-      width: auto;
-      float: right;
-      padding: $nav-elem-padding;
-      li{
-        padding:0 1.2em;
-        display: inline-block;
-        list-style: none;
-        a{
-          font-size: 1em;
-          font-weight: 700;
-        }
-      }
-    }
-    .left-nav{
-      width: auto;
-      float: left;
-      padding: $nav-elem-padding;
-      li{
-        padding: 0 1.2em;
-        display: inline-block;
-        list-style: none;
-        a{
-          font-size: 1em;
-          font-weight: 700;
+          a{
+            font-weight: 200;
+            text-decoration: bold !important;
+            color: $hover;
+            &:hover{
+              color: $hover;
+            }
         }
       }
     }
   }
+  .nav-responsive li{
+    display: none;
+  }
 }
-// This section handles the awesomness of the brand name
-.brand-section{
-  width: 16.33% !important;
 
-  border: 0.75em $brand-color bold;
-    ul.title-area{
-      width: auto;
-      text-align: center;
-      height: $brand-height !important;
-      margin-top: .75em;
-      border: 0.15em $brand-color solid;
-      .toggle-mobile{
-        list-style: none;
-        float:right;
-      }
-      &:hover{
-        background-color: $brand-hover-color;
-      }
-    }
-    li.brand{
-      list-style: none ;
-      display: inline-block;
-      margin-top: 1.5em;
-      a{
-        color: $brand-color;
-        text-decoration: none;
-        font-weight: 700;
-        font-size: 1.5em;
-        &:hover{
-          color: $brand-color;
-          transition: zoom;
-        }
-      }
-    }
+// This section handles the awesomness of the brand name
+#brand{
+  padding-top: 1.3em;
+  padding-left: 0.85em;
+  float: left;
+  width: 150px;
+  height: 40px;
+  display: inline-block;
+  color: #fff;
+  font-weight: 700;
+  clear: both;
   }
 
 // Our Hero Unit Details Are Over Here
@@ -157,3 +120,61 @@ nav{
       font-weight: 700;
     }
 }
+
+/* Media Queries */
+@media (max-width : 700px){
+  .nav-main{
+    display:none;
+   }
+   .nav-responsive{
+    background-color: $nav-color;  
+    width: 100%;
+   }
+   .nav-responsive ul li.hidden {
+    display:inline-block;
+    text-align: center;
+    list-style: none;
+    }
+   }
+   .nav-responsive ul li.hidden:hover {
+    border-radius:4px 0 0 4px;
+   }
+   .nav-responsive ul li.hidden a{
+    
+  }
+  .menu-icon{
+    display: block;
+    clear: both;
+
+    ul{
+      background-color: $nav-color;
+      float: right;
+      width: 100%;
+      li{
+        text-decoration: right;
+        list-style: none;
+        text-align: center;
+        a{
+        color: $brand-color;
+        font-weight: 600;
+        &:hover{
+        color: $hover;
+        }
+      }
+    }
+  }
+}
+.trigger{
+  float: right !important;
+  clear: both;
+  padding-right: 1em;
+  padding-top: -25px;
+  height: auto;
+}
+@media (min-width : 701px){
+   .nav-responsive {
+    display:none;
+    }
+}
+
+
