@@ -27,6 +27,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'friendly_id', '~> 5.1'
 # Paperclip
 # gem 'paperclip'
+# Jquery Turbolinks
+gem 'jquery-turbolinks', '~> 2.1'
 # amazon aws sdk for s3 integration
 # gem 'aws-sdk'
 # bundle exec rake doc:rails generates the API under doc/api.

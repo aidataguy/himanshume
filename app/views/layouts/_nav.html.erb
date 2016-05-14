@@ -1,15 +1,10 @@
 <header>
-      <%= link_to "Himanshu Patel", root_path, id: "brand" %>
-  <!-- <nav class="nav" role="navigation">
-    <div class="nav-responsive">
-   
-      </div>      
-  </nav>
-  <div id= "menu-icon"><%= link_to "#" do %>
-    <i  class="fa fa-bars" aria-hidden: "true"></i>
-    <% end %>
-    </div> -->
+     
+<div class="wrapper">
+   <%= link_to "Himanshu Patel", root_path, id: "brand" %>
+   <a href="#" class="burger-nav fa fa-1x fa-bars">Menu</a>
   <nav class="nav-main">
+    
          <ul>
               <li class= "<%= active_class(root_path) %>"><%= link_to "Home", root_path %></li>
               <li class= "<%= active_class(about_path) %>"><%= link_to "About", about_path %></li>
@@ -17,20 +12,7 @@
               <li class= "<%= active_class(designs_path) %>"><%= link_to "Designs", designs_path %></li>
               <li class= "<%= active_class(development_path) %>"><%= link_to "Development", development_path %></li>
               <li class= "<%= active_class(root_path) %>"><%= link_to "Achievements", root_path %></li>
-
             </ul>
-</nav>
-    <nav class="nav-responsive">
-         <ul>
-              <li class= "<%= active_class(root_path) %>"><%= link_to "Home", root_path %></li>
-              <li class= "<%= active_class(about_path) %>"><%= link_to "About", about_path %></li>
-              <li class= "<%= active_class(articles_path) %>"><%= link_to "Blog", articles_path %></li>
-              <li class= "<%= active_class(designs_path) %>"><%= link_to "Designs", designs_path %></li>
-              <li class= "<%= active_class(development_path) %>"><%= link_to "Development", development_path %></li>
-              <li class= "<%= active_class(root_path) %>"><%= link_to "Achievements", root_path %></li>
-              <li class="hidden trigger"><a rel="nofollow" href="#"></a></li>
-            </ul>
-</nav>
-<div class="menu-icon hidden "></div>
-
+  </nav>
+</div>
 </header>

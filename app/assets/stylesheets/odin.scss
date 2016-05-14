@@ -65,41 +65,45 @@ header{
   left: 0;
   z-index: 100;
   background-color: $nav-color;
+  
   .nav-main{
-  background-color: $nav-color;
+   background-color: $nav-color;
+   //width: 100%;
    float: right;
-   padding: 20px;
    clear: both;
-       // Mobile menu nav
-    .hidden{
-      display: none;
-    }
+   
     ul{
       list-style: none;
+      float: right;
+      clear: both;
+      margin-top: -12px;
       li{
         display: inline-block;
         float: left;
         padding: 10px;
         color: $hover;
           a{
-            font-weight: 200;
+            font-weight: 700;
             text-decoration: bold !important;
             color: $hover;
             &:hover{
-              color: $hover;
+              color: $brand-color;
             }
         }
       }
     }
+    .active{
+    background-color: $highliter;
+   }
   }
-  .nav-responsive li{
-    display: none;
+  .wrapper{
+    width: 100%;
   }
 }
 
 // This section handles the awesomness of the brand name
 #brand{
-  padding-top: 1.3em;
+  padding-top: 2em;
   padding-left: 0.85em;
   float: left;
   width: 150px;
@@ -122,59 +126,81 @@ header{
 }
 
 /* Media Queries */
-@media (max-width : 700px){
-  .nav-main{
-    display:none;
+@media screen and (max-width : 756px){
+  #brand{
+  padding-top: 2em;
+  padding-left: 0.85em;
+  float: left;
+  width: 150px;
+  height: 40px;
+  display: inline-block;
+  color: #fff;
+  text-align: left;
+  font-weight: 700;
+  clear: both;
+  }
+  .nav-main {
+    margin-top: 2.23em;
+    width: 100%;
+  }
+  .burger-nav{
+    display:block !important;
+    margin-top: -0.45em;
+    padding-right: 3em;
+    height: 1.5em;
+    cursor: pointer;
+    color: #fff;
+    width: 1.2em;
+    float: right;
+    clear: both;
+    color: $brand-color;
+    &:hover{
+      color: $highliter;
+    }
    }
-   .nav-responsive{
-    background-color: $nav-color;  
+   .open{
+    width: 100%;
+    //padding-top:4em;
+   }
+   header nav ul{
+    overflow: hidden;
+    height: 0;
+   }
+
+   header nav ul.open{
+    height: auto;
+    // padding-top: 2.78em;
+    width: 100% important;
+   }
+   header nav ul li{
+    float: none;
+    width: 100%;
+    marging: 0;
+    text-align: center;
+    background-color: $brand-color;
+    &:hover{
+      background-color: $highliter;
+
+    }
+   }
+   header nav ul li a{
+    color: #fff;
+    padding: 10px;
+    // border-bottom: 1px solid #fff;
+    font-size: 18px;
     width: 100%;
    }
-   .nav-responsive ul li.hidden {
-    display:inline-block;
-    text-align: center;
-    list-style: none;
-    }
+   .active{
+    background-color: $highliter;
    }
-   .nav-responsive ul li.hidden:hover {
-    border-radius:4px 0 0 4px;
-   }
-   .nav-responsive ul li.hidden a{
-    
-  }
-  .menu-icon{
-    display: block;
-    clear: both;
+}
 
-    ul{
-      background-color: $nav-color;
-      float: right;
-      width: 100%;
-      li{
-        text-decoration: right;
-        list-style: none;
-        text-align: center;
-        a{
-        color: $brand-color;
-        font-weight: 600;
-        &:hover{
-        color: $hover;
-        }
-      }
-    }
+@media screen and (min-width : 757px){
+  .burger-nav{
+    display: none !important;
   }
 }
-.trigger{
-  float: right !important;
-  clear: both;
-  padding-right: 1em;
-  padding-top: -25px;
-  height: auto;
-}
-@media (min-width : 701px){
-   .nav-responsive {
-    display:none;
-    }
-}
 
-
+.content-wrapper{
+  padding-top: 5em;
+}
